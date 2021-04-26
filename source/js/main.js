@@ -1,7 +1,7 @@
 import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
-import {initModals} from './modules/init-modals';
+import {initChangeText} from './modules/init-change-text';
 
 // Utils
 // ---------------------------------
@@ -12,4 +12,4 @@ iosVhFix();
 // Modules
 // ---------------------------------
 
-initModals();
+initChangeText();

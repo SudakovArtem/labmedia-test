@@ -22,13 +22,18 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: $font-family--;
+  font-family: $font-family--primary;
   color: $color-default-black;
 
   background-color: $color-default-white;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @include viewport--sm {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 a {
@@ -48,11 +53,6 @@ textarea {
 }
 
 // chrome autofill background removal
-// Если на проекте у инпутов используются разные цвета фонов\текста -
-// удалите это из глобала и используйте локально с нужными цветами
-// rgba не подойдет, сконвертируйте цвет в hex без прозрачности
-// если в стилях уже используется box-shadow есть другое решение -
-// задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
   box-shadow: inset 0 0 0 1000px $color-default-white;
 

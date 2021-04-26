@@ -2,7 +2,6 @@
 //---------------------------------
 
 @import "vendor/normalize";
-// @import "vendor/swiper";
 
 // Global
 //---------------------------------
@@ -13,23 +12,21 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/typography";
 
 // Blocks
 //---------------------------------
 
 @import "blocks/header";
-@import "blocks/footer";
-@import "blocks/modal";
+@import "blocks/capabilities";
+@import "blocks/advantages";
+@import "blocks/accessories";
+@import "blocks/services";
 
+// Components
+//---------------------------------
 
-// используйте это для отключения ховеров на тач устройствах
-// ! но не используйте это для текстовых полей ( input, textarea )
-// также для любых transition обязательно указывайте transition-property
-// transition: color $default-transition-settings, а не transition: $default-transition-settings
-
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: red;
-  }
-} */
+@import "components/capabilities-item";
+@import "components/advantages-item";
+@import "components/accessories-item";
+@import "components/services-item";

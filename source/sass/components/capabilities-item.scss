@@ -1,0 +1,85 @@
+.capabilities-item {
+  display: block;
+  border-radius: 5px;
+  transition: opacity $default-transition-settings;
+
+  &--filled {
+    background-color: $color-nero;
+    padding: 20px 15px 29px;
+
+    @include viewport--md {
+      padding: 20px 15px 8px;
+    }
+
+    .capabilities-item__img {
+      border-bottom: 1px solid rgba($color-default-white, 0.25);
+      padding-bottom: 0;
+
+      img {
+        max-width: 163px;
+      }
+
+      @include viewport--md {
+        img {
+          max-width: 100%;
+        }
+      }
+
+      @include viewport--sm {
+        img {
+          max-width: 228px;
+        }
+      }
+    }
+
+    .capabilities-item__description {
+      font-size: 14px;
+      line-height: 21px;
+      color: $color-default-white;
+    }
+  }
+
+  &--small {
+    .capabilities-item__img {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    @include viewport--sm {
+      .capabilities-item__description {
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}
+
+.capabilities-item__img {
+  border-bottom: 1px solid rgba($color-default-black, 0.1);
+  padding-bottom: 25px;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.capabilities-item__description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 19px 0;
+  margin: 0;
+  color: $color-default-black;
+
+  @include viewport--md {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

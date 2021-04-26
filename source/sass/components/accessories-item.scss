@@ -1,0 +1,72 @@
+.accessories-item {
+  display: block;
+  transition: opacity $default-transition-settings;
+
+  &--small {
+    .accessories-item__description {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22.5%;
+        height: 1px;
+        background-color: $color-default-black;
+
+        @include viewport--md {
+          width: 15.5%;
+        }
+
+        @include viewport--sm {
+          width: 35%;
+        }
+      }
+
+      @include viewport--sm {
+        font-size: 12px;
+        line-height: 17px;
+        padding-right: 2px;
+      }
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}
+
+.accessories-item__img {
+  padding-bottom: 25px;
+}
+
+.accessories-item__description {
+  font-family: $font-family--primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-default-black;
+  padding: 19px 0;
+  margin: 0 -1px 0 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color-default-black, 0.1);
+  }
+
+  @include viewport--md {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

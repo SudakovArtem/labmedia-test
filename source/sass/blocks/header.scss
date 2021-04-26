@@ -1,36 +1,122 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
+  min-height: 60px;
+  padding: 0 25px;
 
-  background-color: $color-blue;
+  background-color: $color-default-white;
+  border-bottom: 1px solid rgba($color-default-black, 0.1);
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
-  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 20.7%;
+    background-color: $color-fire-engine-red;
 
-  a,
-  p {
-    color: $color-white;
-  }
-
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
-
-    list-style: none;
-
-    li {
-      margin-right: 20px;
+    @include viewport--sm {
+      display: none;
     }
   }
 
-  .main-nav__toggle {
+  @include viewport--sm {
+    min-height: 50px;
+    padding: 0 15px;
+  }
+}
+
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+
+  @include viewport--sm {
+    padding-top: 0;
+  }
+}
+
+.header__logo {
+  transition: opacity $default-transition-settings;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  @include viewport--sm {
+    &:not(:last-of-type) {
+      margin-right: 15px;
+    }
+
+    &--e {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &--m {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.header__name {
+  font-family: $font-family--primary;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba($color-default-black, 0.7);
+  margin: 0 0 2px 30px;
+
+  @include viewport--sm {
     display: none;
+  }
+}
+
+.header__toggle {
+  cursor: pointer;
+  padding: 0;
+  background: $color-transparent;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  transition: opacity $default-transition-settings;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    left: 4px;
+    top: 6px;
+    background-color: $color-fire-engine-red;
+    box-shadow: 0 7px 0 0 $color-fire-engine-red, 0 14px 0 0 $color-fire-engine-red;
+  }
+
+  @include viewport--sm {
+    margin-top: 4px;
   }
 }

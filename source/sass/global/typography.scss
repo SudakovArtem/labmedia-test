@@ -1,0 +1,27 @@
+.h1 {
+  font-family: $font-family--primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 50px;
+  color: $color-default-black;
+
+  @include viewport--sm {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.h2 {
+  font-family: $font-family--primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  color: $color-default-black;
+
+  @include viewport--sm {
+    font-size: 22px;
+    line-height: 31px;
+  }
+}

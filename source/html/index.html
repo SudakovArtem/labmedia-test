@@ -3,73 +3,223 @@
 <head>
 
   @@include("source/html/base/head.html")
-  <title>Список страниц</title>
-
-  <style>
-    .container {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    h1 {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    a {
-      color: rgb(10, 10, 175);
-    }
-
-    li {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 7px;
-    }
-
-    img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-      ol {
-        padding-left: 20px;
-      }
-
-      ol li {
-        margin-bottom: 15px;
-      }
-
-      .container {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-  </style>
+  <title>Samsung Galaxy S10</title>
 
 </head>
 <body>
 
-  <main>
-    <div class="container">
-      <img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта">
-      <h1>Список страниц и компонентов</h1>
-      <ol>
-        <li>
-          <a href="components.html">UI Kit — components.html</a>
-        </li>
-        <li>
-          <a href="main.html">Главная — main.html</a>
-        </li>
-        <li>
-          <a href="#">Название страницы (состояние страницы, если отдельное) — ссылка на страницу</a>
-        </li>
-      </ol>
-    </div>
-  </main>
+<div style="display: none;">
+  @@include("build/img/sprite_auto.svg")
+</div>
 
+<div class="wrapper">
+  @@include("source/html/base/header.html", {
+  "main": true
+  })
+
+  <main>
+    <section class="capabilities container">
+      <div class="capabilities__container">
+        <p class="capabilities__device"><span>Samsung Galaxy S10</span></p>
+        <div class="capabilities__header">
+          <h1 class="h1 capabilities__title">Еще больше возможностей</h1>
+        </div>
+        <h2 class="h2 capabilities__subtitle">Новый дизайн</h2>
+        <ul class="capabilities__list">
+          <li class="capabilities__item capabilities__item--filled">
+            <a class="capabilities-item capabilities-item--filled" href="#">
+              <div class="capabilities-item__img">
+                <img src="./img/content/capabilities-img1.png" srcset="./img/content/capabilities-img1@2x.png 2x"
+                     alt="capabilities-img">
+              </div>
+              <p class="capabilities-item__description">Абсолютно новый Infinity-O экран — на передней стороне смартфона
+                нет ничего, кроме огромного экрана и фронтальной камеры.</p>
+            </a>
+          </li>
+          <li class="capabilities__item">
+            <a class="capabilities-item" href="#">
+              <div class="capabilities-item__img">
+                <img src="./img/content/capabilities-img2.png" srcset="./img/content/capabilities-img2@2x.png 2x"
+                     alt="capabilities-img">
+              </div>
+              <p class="capabilities-item__description">Для любителей роскоши, модель S10+ будет выпускаться в
+                керамическом корпусе черного и белого цветов.</p>
+            </a>
+          </li>
+          <li class="capabilities__item capabilities__item--small">
+            <a class="capabilities-item capabilities-item--small" href="#">
+              <div class="capabilities-item__img">
+                <img src="./img/content/capabilities-img3.png" srcset="./img/content/capabilities-img3@2x.png 2x"
+                     alt="capabilities-img">
+              </div>
+              <p class="capabilities-item__description">Смартфоны доступны в 4х стильных цветах: Перламутр, Аквамарин,
+                Оникс и Цитрус (для S10e).</p>
+            </a>
+          </li>
+          <li class="capabilities__item capabilities__item--small">
+            <a class="capabilities-item capabilities-item--small" href="#">
+              <div class="capabilities-item__img">
+                <img src="./img/content/capabilities-img4.png" srcset="./img/content/capabilities-img4@2x.png 2x"
+                     alt="capabilities-img">
+              </div>
+              <p class="capabilities-item__description">В моделях S10 и S10+ установлены защитные стекла нового
+                поколения – Gorilla Glass 6.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="advantages container">
+      <div class="advantages__container">
+        <h2
+          class="h2 advantages__title js-text-changer"
+          data-mobile-text="Съемка видео"
+          data-tablet-text="Съемка видео"
+          data-desktop-text="Сканер отпечатка в экране">Сканер отпечатка в экране</h2>
+        <div class="advantages__img">
+          <img src="./img/content/advantages-img.jpg" srcset="./img/content/advantages-img@2x.jpg 2x"
+               alt="advantages-img">
+        </div>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages-item">
+            <div class="advantages-item__icon">
+              <svg width="60" height="60" fill="none">
+                <use xlink:href="#icon-quality"></use>
+              </svg>
+            </div>
+            <p class="advantages-item__description">Отличное качество съемки новых поколениесмартфонов Samsung позволит
+              создать и смотреть праздники, семейные торжества и памятные моменты на огромном экране, с яркими, живыми
+              цветами и прекрасной детализацией.</p>
+          </li>
+          <li class="advantages__item advantages-item">
+            <div class="advantages-item__icon">
+              <svg width="60" height="60" fill="none">
+                <use xlink:href="#icon-stabilization"></use>
+              </svg>
+            </div>
+            <p class="advantages-item__description">Дополнительная система стабилизации сделает видеоролики плавными и
+              красивыми.</p>
+          </li>
+          <li class="advantages__item advantages-item">
+            <div class="advantages-item__icon">
+              <svg width="60" height="60" fill="none">
+                <use xlink:href="#icon-slow-motion"></use>
+              </svg>
+            </div>
+            <p class="advantages-item__description">Сверхзамедленная съемка (960 кадров в секунду) теперь в 2 раза
+              дольше. Камера в S10 способна распознать самое стремительное движение, такое как языки пламени, брызги
+              воды, дым из под колес спорткара.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="accessories container">
+      <div class="accessories__container">
+        <h2 class="h2 accessories__title">Аксессуары</h2>
+        <ul class="accessories__list">
+          <li class="accessories__item">
+            <a href="#" class="accessories-item">
+              <div class="accessories-item__img">
+                <img src="./img/content/accessories-img1.png" srcset="./img/content/accessories-img1@2x.png 2x"
+                     alt="accessories-img">
+              </div>
+              <p
+                class="accessories-item__description js-text-changer"
+                data-mobile-text="Обширный ассортимент чехлов лля каждой модели. Цветовая гамма, отличное качество, премиальные материалы и дополнительные возможности призваны удовлетворить даже самый притязательный вкус."
+                data-tablet-text="Обширный ассортимент чехлов лля каждой модели. Цветовая гамма, отличное качество, премиальные материалы и дополнительные возможности призваны удовлетворить даже самый притязательный вкус."
+                data-desktop-text="Для любителей роскоши, модель S10+ будет выпускаться в керамическом корпусе черного и белого цветов."
+              >Для любителей роскоши, модель S10+ будет выпускаться в керамическом корпусе черного и белого цветов.</p>
+            </a>
+          </li>
+          <li class="accessories__item">
+            <a href="#" class="accessories-item">
+              <div class="accessories-item__img">
+                <img src="./img/content/accessories-img2.png" srcset="./img/content/accessories-img1@2x.png 2x"
+                     alt="accessories-img">
+              </div>
+              <p
+                class="accessories-item__description js-text-changer"
+                data-mobile-text="Беспроводная зарядная станция Duo Pad быстро заряжает одновременно два устройства, одно из которых охлаждается."
+                data-tablet-text="Обширный ассортимент чехлов лля каждой модели. Цветовая гамма, отличное качество, премиальные материалы и дополнительные возможности призваны удовлетворить даже самый притязательный вкус."
+                data-desktop-text="Для любителей роскоши, модель S10+ будет выпускаться в керамическом корпусе черного и белого цветов."
+              >Для любителей роскоши, модель S10+ будет выпускаться в керамическом корпусе черного и белого цветов.</p>
+            </a>
+          </li>
+          <li class="accessories__item accessories__item--small">
+            <a href="#" class="accessories-item accessories-item--small">
+              <p class="accessories-item__description">Galaxy S10+ в режиме Dex поддерживает широкоформатные мониторы.
+                Мощный смартфон превращается в мощный десктоп.</p>
+            </a>
+          </li>
+          <li class="accessories__item accessories__item--small">
+            <a href="#" class="accessories-item accessories-item--small">
+              <p class="accessories-item__description">Смартфон S10 сразу укомплектован защитной пленкой.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="services container">
+      <div class="services__container">
+        <h2 class="h2 services__title">Приложения и сервисы Samsung</h2>
+        <ul class="services__list">
+          <li class="services__item">
+            <a href="#" class="services-item">
+              <div class="services-item__icon">
+                <img src="./img/content/services-icon1.png" srcset="./img/content/services-icon1@2x.png 2x"
+                     alt="services-icon">
+              </div>
+              <p class="services-item__description">Благодаря приложению Smart Switch можно перенести информацию со
+                старого смартфона на новый.</p>
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="#" class="services-item services-item--mirrored">
+              <div class="services-item__icon">
+                <img src="./img/content/services-icon2.png" srcset="./img/content/services-icon2@2x.png 2x"
+                     alt="services-icon">
+              </div>
+              <p class="services-item__description">Приложение Samsung Health помогает контролировать физическую
+                активность и вести дневник питания.</p>
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="#" class="services-item">
+              <div class="services-item__icon">
+                <img src="./img/content/services-icon3.png" srcset="./img/content/services-icon3@2x.png 2x"
+                     alt="services-icon">
+              </div>
+              <p class="services-item__description">Интеллектуальный помощник Bixby обеспечит быстрый доступ к
+                переводчику, поиску в Интернете, покупкам и многому другому.</p>
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="#" class="services-item services-item--mirrored">
+              <div class="services-item__icon">
+                <img src="./img/content/services-icon4.png" srcset="./img/content/services-icon4@2x.png 2x"
+                     alt="services-icon">
+              </div>
+              <p class="services-item__description">Приложение Samsung Pay дает возможность оплачивать свои покупки при
+                помощи смартфона.</p>
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="#" class="services-item">
+              <div class="services-item__icon">
+                <img src="./img/content/services-icon5.png" srcset="./img/content/services-icon5@2x.png 2x"
+                     alt="services-icon">
+              </div>
+              <p class="services-item__description">Благодаря приложению Smart Things можно управлять всеми <span
+                style="white-space: nowrap;">смарт-устройствами</span> дома.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="js/vendor.min.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 </html>
